@@ -1,0 +1,349 @@
+:root {
+    --bg: #f4f1ea;
+    --ink: #161616;
+    --muted: #2c2c2c;
+    --line: #161616;
+    --paper: #fbfaf6;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    color-scheme: light;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Segoe UI", Calibri, Arial, ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+}
+
+:focus-visible {
+    outline: 3px solid var(--ink);
+    outline-offset: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    left: 0.75rem;
+    top: 0.75rem;
+    transform: translateY(-150%);
+    background: var(--ink);
+    color: var(--bg);
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+    z-index: 10;
+}
+
+.skip-link:focus {
+    transform: none;
+}
+
+.shell {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+}
+
+.site-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.brand-name {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 650;
+    font-size: 1.125rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.brand-meta {
+    margin: 0.15rem 0 0;
+    color: var(--muted);
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.65rem 0.7rem;
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link[aria-current="page"] {
+    border-bottom-color: var(--ink);
+}
+
+.site-main {
+    padding: 2rem 0 3rem;
+}
+
+.site-footer {
+    border-top: 1px solid var(--line);
+    padding-top: 1rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.site-footer p {
+    margin: 0.35rem 0;
+}
+
+.site-note {
+    max-width: 36rem;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 650;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+}
+
+h1 {
+    font-size: 1.85rem;
+    margin: 0 0 0.75rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin: 2rem 0 0.4rem;
+}
+
+.hero-place,
+.lede,
+.meta {
+    color: var(--muted);
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0 2.5rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.7rem 1.1rem;
+    background: var(--ink);
+    color: var(--bg);
+    text-decoration: none;
+    border: 2px solid var(--ink);
+    font: inherit;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus-visible {
+    background: var(--bg);
+    color: var(--ink);
+}
+
+.button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.button-quiet {
+    background: transparent;
+    color: var(--ink);
+}
+
+.button-quiet:hover,
+.button-quiet:focus-visible {
+    background: var(--ink);
+    color: var(--bg);
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 0.15em;
+}
+
+.work-lines {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.work-lines li + li {
+    margin-top: 0.85rem;
+}
+
+.case {
+    margin: 2rem 0;
+}
+
+.case .meta {
+    margin-top: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.contact-form p {
+    margin: 0 0 1rem;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    font: inherit;
+    color: inherit;
+    background: var(--paper);
+    border: 1px solid var(--ink);
+    padding: 0.65rem 0.7rem;
+    min-height: 44px;
+}
+
+.contact-form textarea {
+    min-height: 10rem;
+    resize: vertical;
+}
+
+.hp {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-errors {
+    color: #7a1212;
+    padding-left: 1.2rem;
+}
+
+.form-ok {
+    font-weight: 600;
+}
+
+.boot {
+    margin: 20vh auto;
+    text-align: center;
+    font-weight: 650;
+}
+
+#blazor-error-ui {
+    background: var(--ink);
+    color: var(--bg);
+    bottom: 0;
+    display: none;
+    left: 0;
+    padding: 0.75rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui a {
+    color: inherit;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cv-screen-bar {
+    max-width: 210mm;
+    margin: 1rem auto;
+    font-family: "Segoe UI", Calibri, Arial, sans-serif;
+}
+
+.cv-print-main {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media print {
+    .skip-link,
+    .site-header,
+    .site-footer,
+    .cv-screen-bar {
+        display: none !important;
+    }
+
+    body,
+    .shell,
+    .site-main,
+    .cv-print-main {
+        background: #fff;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        color: #000;
+    }
+}

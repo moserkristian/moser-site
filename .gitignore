@@ -1,0 +1,12 @@
+bin/
+obj/
+.vs/
+.idea/
+*.user
+*.suo
+artifacts/
+published/
+TestResults/
+local.settings.json
+*.DotSettings.user
+.DS_Store

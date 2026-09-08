@@ -1,0 +1,41 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager Nav
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="shell">
+    <header class="site-header">
+        <div class="brand">
+            <a class="brand-name" href="/">@SiteCopy.Name</a>
+            <p class="brand-meta">@SiteCopy.Title · @SiteCopy.Place</p>
+        </div>
+        <nav class="nav" aria-label="Primary">
+            <a href="/" class="nav-link" aria-current="@Current("/")">Home</a>
+            <a href="/work" class="nav-link" aria-current="@Current("/work")">Work</a>
+            <a href="/contact" class="nav-link" aria-current="@Current("/contact")">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main" class="site-main">
+        @Body
+    </main>
+
+    <footer class="site-footer">
+        <p>@SiteCopy.Company · @SiteCopy.Place · <a href="@SiteCopy.GitHub">GitHub</a></p>
+        <p class="site-note">This site is a static Blazor app. Azure Functions handle the form. GitHub Actions deploys it.</p>
+    </footer>
+</div>
+
+@code {
+    private string? Current(string href)
+    {
+        var path = Nav.ToBaseRelativePath(Nav.Uri).TrimEnd('/');
+        var target = href.Trim('/');
+        if (string.IsNullOrEmpty(target))
+        {
+            return string.IsNullOrEmpty(path) ? "page" : null;
+        }
+
+        return path.Equals(target, StringComparison.OrdinalIgnoreCase) ? "page" : null;
+    }
+}

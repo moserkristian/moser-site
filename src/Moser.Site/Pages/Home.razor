@@ -1,0 +1,21 @@
+﻿@page "/"
+
+<PageTitle>@SiteCopy.Name — @SiteCopy.Title</PageTitle>
+
+<section class="hero">
+    <h1>@SiteCopy.Hero</h1>
+    <p class="hero-place">@SiteCopy.Place</p>
+    <p class="actions">
+        <a class="button" href="/contact">Contact</a>
+        <a class="button button-quiet" href="/cv">CV (PDF)</a>
+    </p>
+</section>
+
+<section aria-labelledby="work-lines">
+    <h2 id="work-lines" class="visually-hidden">Selected work</h2>
+    <ul class="work-lines">
+        <li><a href="/work#thermo-fisher">Thermo Fisher Scientific</a> — laboratory result APIs on ASP.NET Core; file handling on AWS.</li>
+        <li><a href="/work#ng-aviation">NG Aviation</a> — NOTAM to AIXM JSON, REST APIs, PostgreSQL / PostGIS.</li>
+        <li><a href="/work#comap">ComAp Group</a> — service boundaries, Blazor UI, .NET Aspire for local run.</li>
+    </ul>
+</section>
