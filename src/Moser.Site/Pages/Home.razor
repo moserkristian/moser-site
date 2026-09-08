@@ -1,0 +1,48 @@
+﻿@page "/"
+
+<PageTitle>@SiteCopy.Brand</PageTitle>
+
+<section class="hero">
+    <h1>@SiteCopy.Hero</h1>
+    <p class="lede">@SiteCopy.Lede</p>
+    <p class="actions">
+        <a class="button" href="/contact">Contact</a>
+        <a class="button button-quiet" href="/services">Services</a>
+    </p>
+</section>
+
+<section class="section" aria-labelledby="home-services">
+    <h2 id="home-services">Services</h2>
+    <ul class="offer-grid">
+        @foreach (var offer in ServicesOffered.All)
+        {
+            <li>
+                <a class="offer-card" href="/contact?need=@offer.Id">
+                    <h3>@offer.Title</h3>
+                    <p>@offer.Summary</p>
+                </a>
+            </li>
+        }
+    </ul>
+</section>
+
+<section class="section" aria-labelledby="home-work">
+    <h2 id="home-work" class="visually-hidden">Selected work</h2>
+    <ul class="work-lines">
+        <li>
+            <a href="/work#thermo-fisher">Thermo Fisher Scientific</a>
+            <span>Laboratory result APIs on ASP.NET Core; file handling on AWS.</span>
+        </li>
+        <li>
+            <a href="/work#ng-aviation">NG Aviation</a>
+            <span>NOTAM to AIXM JSON, REST APIs, PostgreSQL / PostGIS.</span>
+        </li>
+        <li>
+            <a href="/work#comap">ComAp Group</a>
+            <span>Service boundaries, Blazor UI, .NET Aspire for local run.</span>
+        </li>
+    </ul>
+    <p class="section-more">
+        <a href="/work">More work</a>
+    </p>
+</section>

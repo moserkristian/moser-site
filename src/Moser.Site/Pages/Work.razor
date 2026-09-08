@@ -1,0 +1,62 @@
+@page "/work"
+
+<PageTitle>Work — @SiteCopy.Brand</PageTitle>
+
+<h1>Work</h1>
+<p class="lede">Short notes on what the work was and what shipped. Same facts as the CV.</p>
+
+<section class="case" aria-labelledby="moser-consulting">
+    <p class="case-kind">Now</p>
+    <h2 id="moser-consulting">@WorkHistory.CurrentEmployer</h2>
+    <p class="meta">@WorkHistory.CurrentRole · @WorkHistory.CurrentDates · @WorkHistory.CurrentPlace</p>
+    <p>Client and product work under one company.</p>
+</section>
+
+<article class="case" id="ng-aviation" aria-labelledby="ng-aviation-title">
+    <p class="case-kind">Client</p>
+    <h2 id="ng-aviation-title">@WorkHistory.NgAviation.Name</h2>
+    <p class="meta">@WorkHistory.NgAviation.Dates · @WorkHistory.NgAviation.Place</p>
+    <p>NOTAM feeds had to land as AIXM JSON and be published to a cloud database. REST APIs over that aerospace data, PostgreSQL / PostGIS for geospatial queries, and cleaner layering in the existing services. Docker and CI/CD were part of the delivery.</p>
+</article>
+
+<article class="case" id="comap" aria-labelledby="comap-title">
+    <p class="case-kind">Client</p>
+    <h2 id="comap-title">@WorkHistory.ComAp.Name</h2>
+    <p class="meta">@WorkHistory.ComAp.Dates · @WorkHistory.ComAp.Place</p>
+    <p>Early cloud platform work: service boundaries, inter-service APIs, and a Clean Architecture split. .NET Aspire ran the services locally for development and tests. Blazor UI against those APIs, and fewer unnecessary database round trips with a clearer command/query split.</p>
+</article>
+
+<article class="case" id="sfcfo" aria-labelledby="sfcfo-title">
+    <p class="case-kind">Client</p>
+    <h2 id="sfcfo-title">@WorkHistory.SfCfo.Name</h2>
+    <p class="meta">@WorkHistory.SfCfo.Dates · @WorkHistory.SfCfo.Place</p>
+    <p>Short scoped delivery on a .NET 9 Blazor Server product (MudBlazor, EF Core): a Mapbox GL map view and E.164 phone input.</p>
+</article>
+
+<article class="case" id="policy-qa" aria-labelledby="policy-qa-title">
+    <p class="case-kind">Open work</p>
+    <h2 id="policy-qa-title">@WorkHistory.PolicyQa.Name</h2>
+    <p class="meta">@WorkHistory.PolicyQa.Dates</p>
+    <p>Markdown policies go through retrieval and come back as answers with citations. A C# Allow / Deny / NeedsHuman layer sits on top, with tests. Built with Blazor, .NET Aspire, and Ollama. <a href="@WorkHistory.PolicyQa.Url">github.com/moserkristian/Moser.RagAi</a></p>
+</article>
+
+<article class="case" id="thermo-fisher" aria-labelledby="thermo-fisher-title">
+    <p class="case-kind">Earlier</p>
+    <h2 id="thermo-fisher-title">@WorkHistory.ThermoFisher.Name</h2>
+    <p class="meta">@WorkHistory.ThermoFisher.Role · @WorkHistory.ThermoFisher.Dates · @WorkHistory.ThermoFisher.Place</p>
+    <p>ASP.NET Core Web APIs for laboratory test results. File handling on AWS. Tests, monitoring, and pipelines. Written English across time zones.</p>
+</article>
+
+<article class="case" id="socialna-poistovna" aria-labelledby="sp-title">
+    <p class="case-kind">Earlier</p>
+    <h2 id="socialna-poistovna-title">@WorkHistory.SocialnaPoistovna.Name</h2>
+    <p class="meta">@WorkHistory.SocialnaPoistovna.Role · @WorkHistory.SocialnaPoistovna.Dates · @WorkHistory.SocialnaPoistovna.Place</p>
+    <p>.NET internal systems, incident handling, and backup and recovery automation.</p>
+</article>
+
+<article class="case" id="frequentis" aria-labelledby="frequentis-title">
+    <p class="case-kind">Earlier</p>
+    <h2 id="frequentis-title">@WorkHistory.Frequentis.Name</h2>
+    <p class="meta">@WorkHistory.Frequentis.Role · @WorkHistory.Frequentis.Dates · @WorkHistory.Frequentis.Place</p>
+    <p>Optimised 6–7 multithreaded components (about 24% better performance). Real-time client–server UI and a small HTML/JS client.</p>
+</article>

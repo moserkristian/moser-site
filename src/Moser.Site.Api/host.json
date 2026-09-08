@@ -1,0 +1,22 @@
+{
+  "version": "2.0",
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true
+      },
+      "httpAutoCollectionOptions": {
+        "enableHttpTriggerExtendedInfoCollection": false
+      }
+    },
+    "logLevel": {
+      "default": "Warning",
+      "Moser.Site.Api": "Information"
+    }
+  },
+  "extensions": {
+    "http": {
+      "routePrefix": "api"
+    }
+  }
+}

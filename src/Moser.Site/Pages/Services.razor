@@ -1,0 +1,25 @@
+@page "/services"
+
+<PageTitle>Services — @SiteCopy.Brand</PageTitle>
+
+<h1>Services</h1>
+<p class="lede">Contract work through @SiteCopy.Company.</p>
+
+<div class="service-list">
+    @foreach (var offer in ServicesOffered.All)
+    {
+        <article class="service-block" aria-labelledby="service-@offer.Id">
+            <h2 id="service-@offer.Id">@offer.Title</h2>
+            <p class="lede">@offer.Summary</p>
+            <ul class="point-list">
+                @foreach (var point in offer.Points)
+                {
+                    <li>@point</li>
+                }
+            </ul>
+            <p>
+                <a class="button" href="/contact?need=@offer.Id">Contact</a>
+            </p>
+        </article>
+    }
+</div>
