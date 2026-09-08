@@ -35,6 +35,11 @@ body {
     outline-offset: 3px;
 }
 
+#main:focus,
+#main:focus-visible {
+    outline: none;
+}
+
 .skip-link {
     position: absolute;
     left: 0.75rem;

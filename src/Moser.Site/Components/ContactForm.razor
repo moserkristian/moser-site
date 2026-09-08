@@ -1,7 +1,7 @@
 @inject HttpClient Http
 @inject IConfiguration Config
 
-<form class="contact-form" method="post" @onsubmit="SubmitAsync" @onsubmit:preventDefault>
+<form class="contact-form" method="post" novalidate @onsubmit="SubmitAsync" @onsubmit:preventDefault>
     <div class="hp" aria-hidden="true">
         <label>
             Website
