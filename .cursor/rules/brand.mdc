@@ -1,0 +1,14 @@
+---
+description: Public name, domain, and how the site talks about Kristián and the company
+alwaysApply: true
+---
+
+# Public identity
+
+- Domain is `kristianmoser.com` (no diacritics). One site on that address.
+- The person is Kristián Moser. Use that name in the header, page titles, CV, and contact.
+- The company is Moser Consulting s.r.o. Contracts, invoices, and payments are the company. Say so. Do not hide the person behind the company, and do not hide the company behind the person.
+- Do not add a portrait. Do not use the phone-to-ear photo.
+- Do not put job-seeking copy on the marketing pages (open roles, TPP, available now, rates). The CV stays linked from the footer.
+- Reply to people as Kristián Moser. Employment is a personal contract. Contract work is Moser Consulting s.r.o., with Kristián named as the person who does the work.
+- The public site is React and TypeScript. The contact API stays ASP.NET isolated Functions. Do not bring the Blazor frontend back.

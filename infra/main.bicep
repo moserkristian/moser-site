@@ -81,9 +81,9 @@ resource staticWebApp 'Microsoft.Web/staticSites@2022-09-01' = {
   }
   properties: {
     buildProperties: {
-      appLocation: 'src/Moser.Site'
+      appLocation: 'src/web'
       apiLocation: 'src/Moser.Site.Api'
-      outputLocation: 'wwwroot'
+      outputLocation: 'dist'
     }
   }
 }

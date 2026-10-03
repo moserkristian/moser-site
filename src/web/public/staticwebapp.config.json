@@ -1,0 +1,19 @@
+{
+  "platform": {
+    "apiRuntime": "dotnet-isolated:8.0"
+  },
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/api/*",
+      "/assets/*",
+      "/Kristian-Moser-CV.pdf",
+      "/*.{txt,json,png,svg,ico,webp,css,js,map,woff,woff2,pdf}"
+    ]
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "X-Frame-Options": "DENY"
+  }
+}

@@ -16,7 +16,7 @@ public static class ContactValidation
     public static readonly string[] AllowedNeeds =
     [
         "apis",
-        "blazor",
+        "ui",
         "architecture",
         "integration",
         "contract"

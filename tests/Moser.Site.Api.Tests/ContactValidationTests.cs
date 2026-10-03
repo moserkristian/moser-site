@@ -49,7 +49,7 @@ public sealed class ContactValidationTests
             Name = "Ada",
             Email = "ada@example.com",
             Message = "Hello, I would like to talk about a .NET contract.",
-            Need = "blazor"
+            Need = "ui"
         });
 
         Assert.Empty(errors);

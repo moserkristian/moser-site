@@ -24,11 +24,18 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      - name: Test
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: src/web/package-lock.json
+
+      - name: Test API
         run: dotnet test Moser.Site.sln --configuration Release
 
-      - name: Publish Blazor WebAssembly
-        run: dotnet publish src/Moser.Site/Moser.Site.csproj --configuration Release -o published
+      - name: Test and build web
+        working-directory: src/web
+        run: npm ci && npm test && npm run build
 
       - name: Deploy
         id: deploy
@@ -37,9 +44,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: upload
-          app_location: published/wwwroot
+          app_location: src/web/dist
           api_location: src/Moser.Site.Api
-          output_location: wwwroot
+          output_location: ""
           skip_app_build: true
 
   close_pull_request:
